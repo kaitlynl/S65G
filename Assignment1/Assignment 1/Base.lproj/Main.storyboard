@@ -42,22 +42,12 @@
                                 <exclude reference="tJA-jE-9lu"/>
                             </mask>
                         </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
+                        <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="aMK-Vi-icZ"/>
                             </mask>
                         </variation>
-                        <variation key="heightClass=compact-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="aMK-Vi-icZ"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="tJA-jE-9lu"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
+                        <variation key="heightClass=regular">
                             <mask key="constraints">
                                 <include reference="tJA-jE-9lu"/>
                             </mask>
