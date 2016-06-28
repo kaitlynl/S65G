@@ -32,9 +32,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jg5-DL-VSh" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="a3B-xx-4KC"/>
-                            <constraint firstItem="jg5-DL-VSh" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.8" id="aMK-Vi-icZ"/>
+                            <constraint firstItem="jg5-DL-VSh" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.8" priority="750" id="aMK-Vi-icZ"/>
                             <constraint firstItem="jg5-DL-VSh" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-25" id="gQR-tq-pf3"/>
-                            <constraint firstItem="jg5-DL-VSh" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.8" id="tJA-jE-9lu"/>
+                            <constraint firstItem="jg5-DL-VSh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="tHX-Km-hNx"/>
+                            <constraint firstItem="jg5-DL-VSh" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.8" priority="750" id="tJA-jE-9lu"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jg5-DL-VSh" secondAttribute="bottom" id="vCX-zH-N0R"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
