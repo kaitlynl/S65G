@@ -22,23 +22,36 @@ class Problem3ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     
     @IBOutlet weak var problem3Output: UITextView!
 
     @IBAction func problem3Run(sender: UIButton) {
-        problem3Output.text = "Problem3 run button was clicked"
+       // problem3Output.text = "Problem3 run button was clicked"
+        
+        var before = initial()
+        var beforeCount = 0
+        for row in 0..<before.count {
+            for col in 0..<before[0].count {
+                if before[row][col] {
+                    beforeCount+=1
+                }
+            }
+        }
+        
+        var after = step (before)
+        var afterCount = 0
+        for row in 0..<before.count {
+            for col in 0..<before[0].count {
+                if after[row][col] {
+                    afterCount+=1
+                }
+            }
+        }
+        problem3Output.text = "Number of living cells count - Before: \(beforeCount); After: \(afterCount)"
+    }
+    
+        
     }
 
 
-}
+

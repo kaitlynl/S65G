@@ -27,10 +27,8 @@ class Problem2ViewController: UIViewController {
 
     @IBAction func problem2Run(sender: UIButton) {
        // problem2Output.text = "Problem 2 run button was clicked"
-       
         let rows = 10
         let cols = 10
-        
         var before = [[Bool]] (count:rows, repeatedValue:[Bool](count:cols, repeatedValue:false))
         var beforeCount = 0
         for row in 0..<rows {
@@ -85,7 +83,6 @@ class Problem2ViewController: UIViewController {
                                     neighborCount+=1
                                 }
                             default:
-                                //    print ("test: \(r) \(c)")
                                 if before[r][c] {
                                     neighborCount+=1
                                 }
@@ -110,8 +107,6 @@ class Problem2ViewController: UIViewController {
                 
             }
         }
-        problem2Output.text = "Before: \(beforeCount); After: \(afterCount)"
-        
+        problem2Output.text = "Number of living cells count - Before: \(beforeCount); After: \(afterCount)"
     }
-
 }

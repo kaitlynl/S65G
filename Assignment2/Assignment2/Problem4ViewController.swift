@@ -23,20 +23,33 @@ class Problem4ViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     @IBOutlet weak var problem4Output: UITextView!
     
     @IBAction func problem4Run(sender: UIButton) {
-        problem4Output.text = "Problem4 Run button was clicked"
+       // problem4Output.text = "Problem4 Run button was clicked"
+        
+        var before = initial()
+        var beforeCount = 0
+        for row in 0..<before.count {
+            for col in 0..<before[0].count {
+                if before[row][col] {
+                    beforeCount+=1
+                }
+            }
+        }
+        
+        var after = step2 (before)
+        var afterCount = 0
+        for row in 0..<before.count {
+            for col in 0..<before[0].count {
+                if after[row][col] {
+                    afterCount+=1
+                }
+            }
+        }
+        problem4Output.text = "Number of living cells count - Before: \(beforeCount); After: \(afterCount) "
     }
     
-}
+    }
+    
+
