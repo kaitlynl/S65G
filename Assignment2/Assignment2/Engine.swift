@@ -11,6 +11,7 @@ import Foundation
 let rows = 10
 let cols = 10
 
+//create an initial board
 func initial( ) -> [[Bool]] {
     
     var before = [[Bool]] (count:rows, repeatedValue:[Bool](count:cols, repeatedValue:false))
@@ -24,6 +25,7 @@ func initial( ) -> [[Bool]] {
     return before
 }
 
+//step from initial board to the next generation board
 func step(before: [[Bool]]) -> [[Bool]] {
     
     var after = [[Bool]] (count:rows, repeatedValue:[Bool](count:cols, repeatedValue:false))
@@ -93,6 +95,7 @@ func step(before: [[Bool]]) -> [[Bool]] {
     return after
 }
 
+//Step2 from initial board to the next generation board, which calls the neighbors function
 func step2(before: [[Bool]]) -> [[Bool]] {
     
     var after = [[Bool]] (count:rows, repeatedValue:[Bool](count:cols, repeatedValue:false))
