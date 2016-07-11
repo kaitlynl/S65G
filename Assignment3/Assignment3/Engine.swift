@@ -26,15 +26,9 @@ func step (before: [[CellState]]) -> [[CellState]] {
                 if before[row][col] == .Living || before[row][col] == .Born{
                     after[row][col] = .Died
                 }
-                if before[row][col] == .Died {
-                    after[row][col] = .Empty
-                }
             case 2:
                 if before[row][col] == .Living || before[row][col] == .Born {
                     after[row][col] = .Living
-                }
-                if before[row][col] == .Died {
-                    after[row][col] = .Empty
                 }
             case 3:
                 if before[row][col] == .Living || before[row][col] == .Born{
@@ -46,9 +40,6 @@ func step (before: [[CellState]]) -> [[CellState]] {
             default:
                 if before[row][col] == .Living || before[row][col] == .Born {
                     after[row][col] = .Died
-                }
-                if before[row][col] == .Died {
-                    after[row][col] =  .Empty
                 }
             }
             
