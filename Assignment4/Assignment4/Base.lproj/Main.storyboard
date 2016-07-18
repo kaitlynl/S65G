@@ -189,7 +189,7 @@
                             <constraint firstItem="rY5-rc-1LI" firstAttribute="top" secondItem="TUS-7L-b12" secondAttribute="centerY" constant="-150" id="wuq-dh-iBR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Statistics" id="zq5-Oy-Cwt"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="first" id="zq5-Oy-Cwt"/>
                     <connections>
                         <outlet property="bornCount" destination="lA0-be-edI" id="6Sg-HY-VgN"/>
                         <outlet property="deadCount" destination="0AE-4J-xUm" id="bBg-WO-W7c"/>
@@ -231,7 +231,7 @@
                                         <color key="value" red="0.0015375962030000001" green="0.54150641030000002" blue="0.0023857205070000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bornColor">
                                         <color key="value" red="0.0015375962030000001" green="0.54150641030000002" blue="0.0023857205070000002" alpha="0.60379849139999997" colorSpace="calibratedRGB"/>
