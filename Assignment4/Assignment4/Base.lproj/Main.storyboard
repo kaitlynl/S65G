@@ -120,7 +120,7 @@
                             <constraint firstItem="V9s-WB-44o" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="xZF-Ay-Hz2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Instrumentation" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Instrumentation" image="Instrumentation" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="columnsOutlet" destination="lzC-RB-kQq" id="5kz-9M-SIa"/>
                         <outlet property="refreshSliderOutlet" destination="kd4-HW-U9M" id="xsv-gM-khV"/>
@@ -169,7 +169,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6D-XD-MIx">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" red="1" green="0.9839373911" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -183,13 +183,13 @@
                             <constraint firstItem="KIn-e9-1J8" firstAttribute="top" secondItem="0AE-4J-xUm" secondAttribute="bottom" constant="50" id="KJr-02-JW5"/>
                             <constraint firstItem="r6D-XD-MIx" firstAttribute="leading" secondItem="TUS-7L-b12" secondAttribute="leading" id="KUI-z2-hlf"/>
                             <constraint firstItem="KIn-e9-1J8" firstAttribute="leading" secondItem="TUS-7L-b12" secondAttribute="centerX" constant="-100" id="QgT-5W-Dww"/>
+                            <constraint firstItem="r6D-XD-MIx" firstAttribute="top" secondItem="YZ5-DV-NIZ" secondAttribute="bottom" id="QyX-5M-yhV"/>
                             <constraint firstItem="0AE-4J-xUm" firstAttribute="top" secondItem="lA0-be-edI" secondAttribute="bottom" constant="50" id="WtC-1D-SfL"/>
-                            <constraint firstItem="r6D-XD-MIx" firstAttribute="top" secondItem="TUS-7L-b12" secondAttribute="top" id="aOh-Ic-KXv"/>
                             <constraint firstItem="rY5-rc-1LI" firstAttribute="leading" secondItem="TUS-7L-b12" secondAttribute="centerX" constant="-100" id="aY2-6S-nfu"/>
                             <constraint firstItem="rY5-rc-1LI" firstAttribute="top" secondItem="TUS-7L-b12" secondAttribute="centerY" constant="-150" id="wuq-dh-iBR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Statistics" image="first" id="zq5-Oy-Cwt"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="Statistics" id="zq5-Oy-Cwt"/>
                     <connections>
                         <outlet property="bornCount" destination="lA0-be-edI" id="6Sg-HY-VgN"/>
                         <outlet property="deadCount" destination="0AE-4J-xUm" id="bBg-WO-W7c"/>
@@ -213,6 +213,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYU-op-8Vi">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzB-vA-1LL">
                                 <rect key="frame" x="50" y="45" width="32" height="30"/>
                                 <state key="normal" title="Step"/>
@@ -250,9 +254,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="vYU-op-8Vi" secondAttribute="bottom" id="8F2-J1-JfX"/>
                             <constraint firstItem="47J-wm-G4R" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.8" priority="750" id="B3X-kl-mhN"/>
                             <constraint firstItem="47J-wm-G4R" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="FqI-mo-FbM"/>
                             <constraint firstItem="47J-wm-G4R" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="-25" id="LZK-kL-Yxb"/>
+                            <constraint firstItem="vYU-op-8Vi" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Ld0-Ma-Wec"/>
+                            <constraint firstItem="vYU-op-8Vi" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="SzX-Kw-u1n"/>
+                            <constraint firstAttribute="trailing" secondItem="vYU-op-8Vi" secondAttribute="trailing" id="YZ9-wx-EAk"/>
                             <constraint firstItem="EzB-vA-1LL" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="50" id="cUG-1R-tfj"/>
                             <constraint firstItem="47J-wm-G4R" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.8" priority="750" id="mJs-4Z-Ppz"/>
                             <constraint firstItem="47J-wm-G4R" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="ox8-Nz-vy8"/>
@@ -276,9 +284,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Simulation" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Simulation" image="Simulation" id="Bed-0k-6Vo"/>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="gridViewOutlet" destination="47J-wm-G4R" id="CGo-Ig-VP8"/>
                     </connections>
@@ -309,7 +317,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="Instrumentation" width="25" height="25"/>
+        <image name="Simulation" width="25" height="25"/>
+        <image name="Statistics" width="25" height="25"/>
     </resources>
 </document>
