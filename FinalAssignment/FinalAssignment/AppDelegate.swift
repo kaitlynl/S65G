@@ -6,6 +6,8 @@
 //  Copyright © 2016 Kaitlyn Li. All rights reserved.
 //
 
+//icons made by Icons8 at https://icons8.com
+
 import UIKit
 
 @UIApplicationMain
