@@ -78,11 +78,6 @@ class InstrumentationViewController: UIViewController {
             //after save to table, reset engine grid to current configuration
             let points  = self.jsonData[editingRow].1.map {($0[0], $0[1])}
             self.setEngineGridWithConfiguration(points)
-            let newGrid = self.engine.reset()
-            for point in points {
-                newGrid[point.0, point.1] = .Living
-            }
-            self.engine.grid = newGrid
         }
     }
     
