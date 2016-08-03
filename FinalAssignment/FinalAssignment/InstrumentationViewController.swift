@@ -76,14 +76,39 @@ class InstrumentationViewController: UIViewController {
             let indexPath = NSIndexPath(forRow: editingRow, inSection: 0)
             self.tableViewOutlet.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             //after save to table, reset engine grid to current configuration
-            let newGrid = self.engine.reset()
             let points  = self.jsonData[editingRow].1.map {($0[0], $0[1])}
+            self.setEngineGridWithConfiguration(points)
+            let newGrid = self.engine.reset()
             for point in points {
                 newGrid[point.0, point.1] = .Living
             }
             self.engine.grid = newGrid
         }
     }
+    
+    func setEngineGridWithConfiguration(points: [(Int, Int)]){
+        /*find the max row and col in the points, if max row and col less than engine rows and cols,
+         *update grid with points; otherwise also update engine rows and cols with round up max row and col
+         */
+        let maxRow = points.reduce(0) { $1.0 > $0 ? $1.0 : $0}
+        let maxCol = points.reduce(0) { $1.1 > $0 ? $1.1 : $0}
+        if maxRow > engine.rows {
+            engine.rows = (maxRow + 9 )/10 * 10
+            rowsOutlet.text = String (engine.rows)
+            rowsStepOutlet.value = Double (engine.rows)
+        }
+        if maxCol > engine.cols {
+            engine.cols = (maxCol + 9)/10 * 10
+            colsOutlet.text = String (engine.cols)
+            colsStepOutlet.value = Double (engine.cols)
+        }
+        let newGrid = engine.reset()
+        for point in points {
+            newGrid[point.0 - 1 , point.1 - 1] = .Living
+        }
+        engine.grid = newGrid
+    }
+    
  
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBAction func addTableCell(sender: UIBarButtonItem) {
@@ -133,6 +158,8 @@ class InstrumentationViewController: UIViewController {
         task.resume()
     }
     
+    @IBOutlet weak var rowsStepOutlet: UIStepper!
+    @IBOutlet weak var colsStepOutlet: UIStepper!
     @IBOutlet weak var rowsOutlet: UITextField!
     @IBOutlet weak var colsOutlet: UITextField!
     @IBAction func rowsStepAction(sender: UIStepper) {
