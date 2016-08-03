@@ -24,7 +24,7 @@ import UIKit
             for row in 0..<grid.rows {
                 for col in 0..<grid.cols {
                     if grid[row, col].isLiving() {
-                        current.append ((row, col))
+                        current.append ((row+1, col+1))
                     }
                 }
             }
