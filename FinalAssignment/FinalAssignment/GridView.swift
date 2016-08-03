@@ -31,15 +31,20 @@ import UIKit
             return current
         }
         set (new){
-            grid = Grid (rows: grid.rows, cols: grid.cols)
+            /*Find the max row and col in the points; If max row and col is greater than current grid rows and cols,
+             *round up max row and col to get new rows and cols.
+             */
+            let maxRow = new.reduce(0) { $1.0 > $0 ? $1.0 : $0}
+            let maxCol = new.reduce(0) { $1.1 > $0 ? $1.1 : $0}
+            let rows = maxRow < grid.rows ? grid.rows : (maxRow + 9 )/10 * 10
+            let cols = maxCol < grid.cols ? grid.cols : (maxCol + 9)/10 * 10
+            grid = Grid (rows: rows, cols: cols)
             for point in new {
-                if point.0 < grid.rows && point.1 < grid.cols   {
-                    grid[point.0, point.1] = .Living
-                }
+                grid[point.0 - 1 , point.1 - 1] = .Living
             }
         }
     }
-    
+
     /*
      // Only override drawRect: if you perform custom drawing.
      // An empty implementation adversely affects performance during animation.
